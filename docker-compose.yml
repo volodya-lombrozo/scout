@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  scout:
+    build: .
+    container_name: scout.agent
+    image: scout:latest
+    ports:
+      - "18081:8080"
