@@ -1,0 +1,2 @@
+# scout
+Monitoring agent
