@@ -5,7 +5,7 @@ import com.github.volodya_lombrozo.scout.Property;
 public class TotalMemory implements Property {
     @Override
     public String name() {
-        return "scout_memory_total";
+        return "memory_total";
     }
 
     @Override

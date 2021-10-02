@@ -5,7 +5,7 @@ import com.github.volodya_lombrozo.scout.Property;
 public class FreeMemory implements Property {
     @Override
     public String name() {
-        return "scout_memory_free";
+        return "memory_free";
     }
 
     @Override

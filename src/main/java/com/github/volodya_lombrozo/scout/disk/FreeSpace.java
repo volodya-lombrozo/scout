@@ -10,7 +10,7 @@ public class FreeSpace implements Property {
     private final String baseUnit;
 
     public FreeSpace() {
-        this("scout_disc_free", "Bytes");
+        this("disc_free", "Bytes");
     }
 
     public FreeSpace(final String name, final String measurement) {

@@ -8,7 +8,7 @@ public class UsableSpace implements Property {
 
     @Override
     public String name() {
-        return "scout_disc_usable";
+        return "disc_usable";
     }
 
     @Override

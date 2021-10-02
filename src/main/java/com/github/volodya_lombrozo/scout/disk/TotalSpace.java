@@ -10,7 +10,7 @@ public class TotalSpace implements Property {
     private final String measurement;
 
     public TotalSpace() {
-        this("scout_disc_total", "Bytes");
+        this("disc_total", "Bytes");
     }
 
     public TotalSpace(final String key, final String measurement) {
