@@ -36,3 +36,7 @@ target/
 !**/src/main/**
 !**/src/test/**
 !src/test/resources/git_repo_example/.git/*
+
+
+#DevOps
+.grafana

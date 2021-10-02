@@ -14,3 +14,11 @@ services:
       - "9090:9090"
     volumes:
       - "./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml"
+
+  grafana:
+    container_name: scout.grafana
+    image: grafana/grafana-enterprise:8.1.5
+    ports:
+      - "3000:3000"
+    volumes:
+      - ".grafana:/var/lib/grafana"

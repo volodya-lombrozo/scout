@@ -4,8 +4,6 @@ import com.github.volodya_lombrozo.scout.All;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.io.BufferedWriter;
-import java.io.OutputStreamWriter;
 import java.util.List;
 import java.util.stream.Collectors;
 
