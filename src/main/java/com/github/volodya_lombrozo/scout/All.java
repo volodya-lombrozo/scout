@@ -1,6 +1,7 @@
 package com.github.volodya_lombrozo.scout;
 
 import com.github.volodya_lombrozo.scout.disk.DiskProperties;
+import com.github.volodya_lombrozo.scout.instance.InstanceProperties;
 import com.github.volodya_lombrozo.scout.memory.MemoryProperties;
 
 import java.util.Arrays;
@@ -13,7 +14,7 @@ public class All implements Properties {
     private final List<Properties> properties;
 
     public All() {
-        this(new DiskProperties(), new MemoryProperties());
+        this(new DiskProperties(), new MemoryProperties(), new InstanceProperties());
     }
 
     public All(Properties... properties) {
