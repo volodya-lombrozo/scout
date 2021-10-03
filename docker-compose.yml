@@ -6,6 +6,8 @@ services:
     image: scout:latest
     ports:
       - "18081:8080"
+    environment:
+      - prometheus.server.host=scout.pushgateway:9091
 
   prometheus:
     container_name: scout.prometheus
