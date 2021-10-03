@@ -11,7 +11,7 @@ public class InstanceProperties implements Properties {
     private final PropertiesArray array;
 
     public InstanceProperties() {
-        this(new NumberOfInstances());
+        this(new NumberOfInstances(), new IP());
     }
 
     public InstanceProperties(Property... properties) {

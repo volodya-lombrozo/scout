@@ -3,15 +3,15 @@ package com.github.volodya_lombrozo.scout;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class AllWithPrefix implements Properties {
+public class AllPrefixed implements Properties {
 
     private final All all;
 
-    public AllWithPrefix() {
+    public AllPrefixed() {
         this(new All());
     }
 
-    public AllWithPrefix(final All all) {
+    public AllPrefixed(final All all) {
         this.all = all;
     }
 

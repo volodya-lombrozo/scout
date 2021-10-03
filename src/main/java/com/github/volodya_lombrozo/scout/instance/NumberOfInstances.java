@@ -5,7 +5,7 @@ import com.github.volodya_lombrozo.scout.Property;
 public class NumberOfInstances implements Property {
     @Override
     public String name() {
-        return "number_of_instances";
+        return "instance_number";
     }
 
     @Override

@@ -6,7 +6,7 @@ public class Prefix implements Property {
     private final Property delegate;
 
     public Prefix(final Property delegate) {
-        this("scout_", delegate);
+        this("scout", delegate);
     }
 
     public Prefix(final String prefix, final Property delegate) {
