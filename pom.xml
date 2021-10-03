@@ -55,6 +55,14 @@
 
 
     <dependencies>
+        <!-- Prometheus push gateway-->
+        <!-- https://mvnrepository.com/artifact/io.prometheus/simpleclient_pushgateway -->
+        <dependency>
+            <groupId>io.prometheus</groupId>
+            <artifactId>simpleclient_pushgateway</artifactId>
+            <version>0.12.0</version>
+        </dependency>
+        <!--SpringBoot dependencies-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>

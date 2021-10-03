@@ -15,6 +15,12 @@ services:
     volumes:
       - "./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml"
 
+  pushgateway:
+    container_name: scout.pushgateway
+    image: prom/pushgateway
+    ports:
+      - "9091:9091"
+
   grafana:
     container_name: scout.grafana
     image: grafana/grafana-enterprise:8.1.5

@@ -37,3 +37,8 @@ scrape_configs:
 
     static_configs:
       - targets: [ 'scout.agent:8080' ]
+
+  - job_name: 'pushgateway'
+
+    static_configs:
+      - targets: [ 'scout.pushgateway:9091' ]

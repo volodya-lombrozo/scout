@@ -5,16 +5,17 @@ import com.github.volodya_lombrozo.scout.Property;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
-public class IP implements Property {
+public class HostName implements Property {
+
     @Override
     public String name() {
-        return "instance_ip";
+        return "instance_name";
     }
 
     @Override
     public String value() {
         try {
-            return InetAddress.getLocalHost().getHostAddress();
+            return InetAddress.getLocalHost().getHostName();
         } catch (UnknownHostException e) {
             return "Unknown";
         }
