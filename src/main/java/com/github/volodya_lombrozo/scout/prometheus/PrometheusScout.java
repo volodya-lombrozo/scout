@@ -1,11 +1,13 @@
 package com.github.volodya_lombrozo.scout.prometheus;
 
 import com.github.volodya_lombrozo.scout.AllPrefixed;
+import com.github.volodya_lombrozo.scout.ApplicationId;
 import com.github.volodya_lombrozo.scout.Scout;
 import io.prometheus.client.CollectorRegistry;
 import io.prometheus.client.exporter.PushGateway;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -17,6 +19,8 @@ public class PrometheusScout implements Scout {
     private final PushGateway pushGateway;
     private final String address;
     private final Logger logger = Logger.getLogger("Prometheus sender");
+    private final ApplicationId id = new ApplicationId();
+
 
     public PrometheusScout() {
         this("scout.pushgateway:9091");
@@ -36,7 +40,9 @@ public class PrometheusScout implements Scout {
         try {
             AllPrefixed properties = new AllPrefixed();
             CollectorRegistry registry = new PrometheusRegistry(properties).toCollectorRegistry();
-            pushGateway.pushAdd(registry, "push_application_properties");
+            HashMap<String, String> groupingKey = new HashMap<>();
+            groupingKey.put("applicationId", String.valueOf(id.intValue()));
+            pushGateway.pushAdd(registry, "push_application_properties", groupingKey);
         } catch (IOException e) {
             logger.info(String.format("Can't send properties to %s", address));
         }
